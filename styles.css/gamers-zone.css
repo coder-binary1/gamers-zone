@@ -1,6 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
 
-* {
+*,
+ul,
+li {
+  padding: 0;
   margin: 0;
   font-family: "Work Sans", sans-serif;
+}
+body {
+  font-family: Work Sans;
+}
+
+/* header related style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 37px 240px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-brand h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.nav-brand > h3 > span {
+  color: #ff42a5;
+}
+.nav-link {
+  color: #3c354f;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.nav-link a {
+  text-decoration: none;
+}
+.nav-link a:visited {
+  color: #3c354f;
+}
+
+.nav-link ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.follow-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 17px 24px;
+  border-radius: 8px;
+  background: rgba(11, 2, 35, 0.1);
+}
+
+/* responsive style */
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 100px 0 0 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 62px;
+    box-shadow: none;
+  }
+  .nav-link ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1400px) {
+  nav {
+    padding: 15px 50px;
+  }
 }
