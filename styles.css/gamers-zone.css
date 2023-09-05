@@ -24,6 +24,9 @@ body {
 .text-primary {
   color: #534c64;
 }
+.text-center {
+  text-align: center;
+}
 .btn-primary {
   border: 0;
   padding: 21px 40px;
@@ -143,7 +146,7 @@ nav {
   display: flex;
   align-items: center;
 }
-.section-text {
+.gamer-section .section-text {
   text-align: right;
 }
 .section-title {
@@ -164,6 +167,41 @@ nav {
 .our-purpose-title {
   font-size: 2rem;
   font-weight: 700;
+}
+
+/* online-game-video */
+.online-games-video {
+  margin-top: 120px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* instant section style */
+.instant {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+}
+.instant-section-text {
+  width: 353px;
+}
+.img-badge {
+  position: relative;
+  top: -250px;
+  left: -120px;
+}
+.instant-online {
+  flex-direction: row-reverse;
+}
+.img-badge-2 {
+  position: relative;
+  top: -250px;
+  right: -520px;
 }
 /*  */
 /* responsive style */
@@ -222,16 +260,43 @@ nav {
     flex-direction: column;
     justify-content: center;
   }
+  .gamer-section .section-text {
+    text-align: center;
+  }
   .gamer-section img {
     width: 90vw;
   }
-  .section-text {
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
     text-align: center;
+  }
+
+  .instant {
+    flex-direction: column;
+  }
+  .section-img img {
+    width: 70vw;
+  }
+  .img-badge img,
+  .img-badge-2 img {
+    width: 30vw;
+  }
+  .img-badge {
+    position: relative;
+    top: -100px;
+    left: -50px;
+  }
+  .img-badge-2 {
+    position: relative;
+    top: -100px;
+    right: -200px;
   }
 }
 @media screen and (min-width: 993px) and (max-width: 1400px) {
   .section-center {
-    margin: 0 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   nav {
     padding: 15px 50px;
@@ -247,5 +312,12 @@ nav {
   .banner-img img {
     width: 90%;
     float: right;
+  }
+  .gamer-section {
+    flex-direction: column;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
   }
 }
