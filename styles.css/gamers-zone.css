@@ -179,6 +179,24 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
+.card-img {
+  position: relative;
+}
+.card-play-icon {
+  display: none;
+}
+.card-img:hover .card-play-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: #3c354fc7;
+  padding: 176px 126px;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
 
 /* instant section style */
 .instant {
@@ -370,7 +388,9 @@ footer ul li > a {
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
   }
-
+  .card-img:hover .card-play-icon {
+    left: 32px;
+  }
   .instant {
     flex-direction: column;
   }
@@ -449,6 +469,9 @@ footer ul li > a {
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
+  .card-img:hover .card-play-icon {
+    left: 55px;
+  }
   .section-img img {
     width: 50vw;
   }
@@ -477,8 +500,4 @@ footer ul li > a {
   .career-img img {
     width: 100%;
   }
-}
-
-.hide {
-  display: none;
 }
